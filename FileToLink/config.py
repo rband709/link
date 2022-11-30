@@ -2,15 +2,15 @@ import os
 
 
 class Config:
-    API_ID = int(os.environ.get("API_ID"))
-    API_HASH = os.environ.get("API_HASH")
-    Token = os.environ.get("BOT_TOKEN")
+    API_ID = int(os.environ.get("API_ID", "3335796"))
+    API_HASH = os.environ.get("API_HASH", "138b992a0e672e8346d8439c3f42ea78")
+    Token = os.environ.get("BOT_TOKEN", "2147458930:AAEpjUlRVk87oK_jsqCOAyvGhLfAh3hFybg")
     Session = os.environ.get("Session_String")
     if Session is None or Session == "":
         Session = ":memory:"
     App_Name = os.environ.get("APP_NAME")
     Port = int(os.environ.get("PORT"))
-    Archive_Channel_ID = int(os.environ.get("ARCHIVE_CHANNEL_ID"))
+    Archive_Channel_ID = int(os.environ.get("ARCHIVE_CHANNEL_ID", "-1001645543494"))
     Start_Message = os.environ.get("Start_Message")
     Bot_Channel = os.environ.get("Bot_Channel_UserName")
     if Bot_Channel and Bot_Channel.startswith("@"):
