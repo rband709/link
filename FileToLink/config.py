@@ -12,7 +12,7 @@ class Config:
     Port = int(os.environ.get("PORT"))
     Archive_Channel_ID = int(os.environ.get("ARCHIVE_CHANNEL_ID", "-1001645543494"))
     Start_Message = os.environ.get("Start_Message")
-    Bot_Channel = os.environ.get("Bot_Channel_UserName")
+    Bot_Channel = os.environ.get("Bot_Channel_UserName", "dlchin")
     if Bot_Channel and Bot_Channel.startswith("@"):
         Bot_Channel = Bot_Channel[1:]
     elif Bot_Channel == "":
