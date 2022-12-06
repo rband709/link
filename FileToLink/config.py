@@ -4,11 +4,11 @@ import os
 class Config:
     API_ID = int(os.environ.get("API_ID","3335796"))
     API_HASH = os.environ.get("API_HASH","138b992a0e672e8346d8439c3f42ea78")
-    Token = os.environ.get("BOT_TOKEN","1996499923:AAGVCjT4msY1AOHb-qtalwMsrwu0dD65k7g")
+    Token = os.environ.get("BOT_TOKEN","")
     Session = os.environ.get("Session_String","false")
     if Session is None or Session == "false":
         Session = ":memory:"
-    App_Name = os.environ.get("APP_NAME","sevenir")
+    App_Name = os.environ.get("APP_NAME","")
     Port = int(os.environ.get("PORT"))
     Archive_Channel_ID = int(os.environ.get("ARCHIVE_CHANNEL_ID","-1001645543494"))
     Start_Message = os.environ.get("Start_Message")
@@ -18,7 +18,7 @@ class Config:
     elif Bot_Channel == "":
         Bot_Channel = None
 
-    Link_Root = f"https://{App_Name}.osc-fr1.scalingo.io"
+    Link_Root = f"http://{App_Name}-dlchinhub.koyeb.app"
     Download_Folder = "Files"
     Dev_Channel = "FarshidBand"
     Bot_UserName = None  # The bot will set it after starting
